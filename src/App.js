@@ -1,13 +1,22 @@
+import { Routes, Route } from 'react-router-dom';
+
+import { ShopsPage } from './views';
+import Header from './modules/Header';
+
 import './App.css';
-import ShopsPage from './views/ShopsPage';
-import ShoppingCartPage from './views/ShoppingCartPage';
+
+import { routes } from './routes';
 
 function App() {
   return (
     <div>
-      <h1>Hello</h1>
-      <ShopsPage />
-      <ShoppingCartPage />
+      <Header />
+      <Routes>
+        {routes.map(({ path, title, component }) => (
+          <Route key={title} path={path} element={component} title={title} />
+        ))}
+      </Routes>
+      {/* <ShopsPage /> */}
     </div>
   );
 }
