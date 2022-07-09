@@ -1,0 +1,31 @@
+{
+  "mcDonalds": [
+    {
+      "id": "1",
+      "img": "",
+      "title": "Big Big Burger",
+      "description": "Best Hot Burger Ever"
+    },
+    {
+      "id": "2",
+      "img": "",
+      "title": "Big Big Burger",
+      "description": "Best Hot Burger Ever"
+    },
+    {
+      "id": "3",
+      "img": "",
+      "title": "Big Big Burger",
+      "description": "Best Hot Burger Ever"
+    },
+    {
+      "id": "4",
+      "img": "",
+      "title": "Big Big Burger",
+      "description": "Best Hot Burger Ever"
+    }
+  ],
+  "ckf": [],
+  "breadAndWine": [],
+  "alcoHeaven": []
+}
