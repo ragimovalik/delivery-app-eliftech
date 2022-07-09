@@ -1,9 +1,5 @@
 const ShoppingCartPage = () => {
-  return (
-    <div>
-      <h2>Shopping Cart Page</h2>
-    </div>
-  );
+  return <div>Shopping Cart Page</div>;
 };
 
 export default ShoppingCartPage;
