@@ -1,0 +1,14 @@
+.shops__box {
+  width: 200px;
+  min-height: 300px;
+  padding: 10px;
+  border: 2px solid blueviolet;
+  border-radius: 6px;
+}
+
+.shops__title {
+  color: purple;
+  margin-bottom: 20px;
+}
+
+/* .shops__list {} */

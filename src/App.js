@@ -1,8 +1,13 @@
 import './App.css';
+import ShopsPage from './views/ShopsPage';
+import ShoppingCartPage from './views/ShoppingCartPage';
 
 function App() {
   return (
-    <div >
+    <div>
+      <h1>Hello</h1>
+      <ShopsPage />
+      <ShoppingCartPage />
     </div>
   );
 }
