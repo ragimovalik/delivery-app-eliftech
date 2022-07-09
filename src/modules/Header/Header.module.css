@@ -1,0 +1,39 @@
+.header {
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.active {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid blue;
+}
+
+.nonActive {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+
+.navItem:not(:last-child) {
+  margin-right: 34px;
+}
+
+.active {
+  color: var(--btnPrimaryBg);
+  border-bottom: 1px solid var(--btnPrimaryBg);
+}
+
+
+*/

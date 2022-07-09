@@ -1,0 +1,16 @@
+.wrapper {
+  /* width: 360px; */
+  min-height: 300px;
+  padding: 10px;
+  border: 2px solid lightseagreen;
+  border-radius: 6px;
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  gap: 10px;
+}
