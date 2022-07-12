@@ -5,7 +5,7 @@ const Shops = ({ shopsList, onClick }) => {
   return (
     <div className={styles.shops__box}>
       <h3 className={styles.shops__title}>Shops:</h3>
-      <ul role="list" className={styles.shops__list}>
+      <ul className={styles.shops__list}>
         {shopsList.map(shop => (
           <Shop key={shop} shopName={shop} onClick={onClick} />
         ))}

@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 const Header = ({ cart }) => {
   return (
     <div className={styles.header}>
-      <ul role="list" className={styles.nav}>
+      <ul className={styles.nav}>
         <li>
           <NavLink
             className={({ isActive }) =>

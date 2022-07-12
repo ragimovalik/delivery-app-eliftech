@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Header from './modules/Header';
 import { ShopsPage, ShoppingCartPage } from './views';
-import { getAllGoods, sendCart } from './shared/helpers/api';
+import { getAllGoods } from './shared/helpers/api';
 
 import { transformData } from './shared/helpers/transformData';
 
@@ -16,7 +16,10 @@ function App() {
 
   useEffect(() => {
     getAllGoods()
-      .then(({ data }) => data.data)
+      .then(res => {
+        console.log(res);
+        return res.data;
+      })
       .then(result => {
         const transformedData = transformData(result);
 

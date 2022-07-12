@@ -5,7 +5,7 @@ import ItemInCart from '../ItemInCart';
 const GoodsInCart = ({ goods, onChangeQuantity }) => {
   return (
     <div className={styles.wrapper}>
-      <ul role="list">
+      <ul>
         {goods.map(item => (
           <ItemInCart
             key={item.item._id}
