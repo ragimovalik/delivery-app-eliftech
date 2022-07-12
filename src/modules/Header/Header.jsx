@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 import styles from './Header.module.css';
 
-const Header = () => {
+const Header = ({ cart }) => {
   return (
     <div className={styles.header}>
       <ul role="list" className={styles.nav}>
@@ -21,7 +21,7 @@ const Header = () => {
             className={({ isActive }) => (isActive ? styles.active : '')}
             to="/cart"
           >
-            My Cart
+            My Cart {cart && <span> - {cart.length}</span>}
           </NavLink>
         </li>
       </ul>

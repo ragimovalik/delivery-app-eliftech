@@ -1,0 +1,23 @@
+.input__box {
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.input__box:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.input__box > label {
+  margin-bottom: 3px;
+  font-size: 0.75rem;
+}
+
+.input__box > input {
+  flex: 1;
+  padding-left: 10px;
+  font-size: 0.875rem;
+}

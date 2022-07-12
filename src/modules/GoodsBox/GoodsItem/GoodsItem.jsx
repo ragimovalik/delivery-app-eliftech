@@ -1,6 +1,6 @@
 import styles from './GoodsItem.module.css';
 
-const GoodsItem = ({ item }) => {
+const GoodsItem = ({ item, onClick }) => {
   return (
     <li>
       <div className={styles.card}>
@@ -11,7 +11,11 @@ const GoodsItem = ({ item }) => {
         />
 
         <p className={styles.card__title}>{item.title}</p>
-        <button type="button" className={styles.card__btn}>
+        <button
+          onClick={() => onClick(item._id)}
+          type="button"
+          className={styles.card__btn}
+        >
           add to Cart
         </button>
       </div>

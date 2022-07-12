@@ -4,25 +4,29 @@
       "id": "1",
       "img": "https://picsum.photos/250/150",
       "title": "Item 11",
-      "description": "Item 1 description"
+      "description": "Item 1 description",
+      "price": 80
     },
     {
       "id": "2",
       "img": "https://picsum.photos/250/149",
       "title": "Item 12",
-      "description": "Item 2 desciption"
+      "description": "Item 2 desciption",
+      "price": 80
     },
     {
       "id": "3",
       "img": "https://picsum.photos/250/151",
       "title": "Item 13",
-      "description": "Item 3 description"
+      "description": "Item 3 description",
+      "price": 80
     },
     {
       "id": "4",
       "img": "https://picsum.photos/250/152",
       "title": "Item 14",
-      "description": "Item 4 description"
+      "description": "Item 4 description",
+      "price": 80
     }
   ],
   "shop-2": [
@@ -30,43 +34,50 @@
       "id": "1",
       "img": "https://picsum.photos/250/148",
       "title": "Item 21",
-      "description": "Item 1 description"
+      "description": "Item 1 description",
+      "price": 80
     },
     {
       "id": "2",
       "img": "https://picsum.photos/250/150",
       "title": "Item 22",
-      "description": "Item 2 desciption"
+      "description": "Item 2 desciption",
+      "price": 80
     },
     {
       "id": "3",
       "img": "https://picsum.photos/250/151",
       "title": "Item 23",
-      "description": "Item 3 description"
+      "description": "Item 3 description",
+      "price": 80
     },
     {
       "id": "4",
       "img": "https://picsum.photos/250/150",
       "title": "Item 24",
-      "description": "Item 4 description"
+      "description": "Item 4 description",
+      "price": 80
     },
     {
       "id": "5",
       "img": "https://picsum.photos/250/149",
       "title": "Item 25",
-      "description": "Item 5 description"
+      "description": "Item 5 description",
+      "price": 80
     },
     {
       "id": "6",
       "img": "https://picsum.photos/250/148",
       "title": "Item 26",
-      "description": "Item 6 description"
+      "description": "Item 6 description",
+      "price": 80
     },
     {
       "id": "7",
       "img": "https://picsum.photos/250/152",
       "title": "Item 27",
-      "description": "Item 7 description"
+      "description": "Item 7 description",
+      "price": 80
     }
   ],
   "shop-3": [
@@ -74,25 +85,29 @@
       "id": "1",
       "img": "https://picsum.photos/250/150",
       "title": "Item 31",
-      "description": "Item 1 description"
+      "description": "Item 1 description",
+      "price": 90
     },
     {
       "id": "2",
       "img": "https://picsum.photos/250/149",
       "title": "Item 32",
-      "description": "Item 2 desciption"
+      "description": "Item 2 desciption",
+      "price": 90
     },
     {
       "id": "3",
       "img": "https://picsum.photos/250/151",
       "title": "Item 33",
-      "description": "Item 3 description"
+      "description": "Item 3 description",
+      "price": 90
     },
     {
       "id": "4",
       "img": "https://picsum.photos/250/152",
       "title": "Item 34",
-      "description": "Item 4 description"
+      "description": "Item 4 description",
+      "price": 90
     }
   ],
   "shop-4": [
@@ -100,25 +115,29 @@
       "id": "1",
       "img": "https://picsum.photos/249/150",
       "title": "Item 41",
-      "description": "Item 1 description"
+      "description": "Item 1 description",
+      "price": 100
     },
     {
       "id": "2",
       "img": "https://picsum.photos/249/149",
       "title": "Item 42",
-      "description": "Item 2 desciption"
+      "description": "Item 2 desciption",
+      "price": 100
     },
     {
       "id": "3",
       "img": "https://picsum.photos/249/151",
       "title": "Item 43",
-      "description": "Item 3 description"
+      "description": "Item 3 description",
+      "price": 100
     },
     {
       "id": "4",
       "img": "https://picsum.photos/249/152",
       "title": "Item 44",
-      "description": "Item 4 description"
+      "description": "Item 4 description",
+      "price": 100
     }
   ]
 }

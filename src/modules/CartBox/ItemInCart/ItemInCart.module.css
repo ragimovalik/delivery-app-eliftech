@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+
+  min-width: 200px;
+  min-height: 120px;
+
+  border: 1px solid red;
+  border-radius: 6px;
+  padding: 5px;
+
+  font-size: 0.875rem;
+}
+
+.card:not(:last-child) {
+  margin-block-end: 10px;
+}
+
+.card__info > p {
+  margin-block-end: 7px;
+}
+
+.card__image {
+  border: 1px solid green;
+  border-radius: 6px;
+  min-width: 150px;
+  margin-inline-end: 5px;
+}
+
+.card__info {
+  margin-bottom: 10px;
+}
+
+/* 
+.card__btn {
+  display: block;
+  margin-left: auto;
+  background: coral;
+} */

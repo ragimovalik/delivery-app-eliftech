@@ -10,7 +10,6 @@
 .card__image {
   border: 1px solid green;
   width: 100%;
-  /* object-position: center; */
 }
 
 .card__title {
