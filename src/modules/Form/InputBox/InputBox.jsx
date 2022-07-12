@@ -2,44 +2,36 @@ import InputComponent from '../InputComponent';
 
 import styles from './InputBox.module.css';
 
-const InputBox = () => {
+const InputBox = ({ onChange }) => {
   return (
     <div className={styles.form}>
       <InputComponent
-        name="Name"
+        name="name"
         placeholder="Your Name"
         type="text"
         labelText="Name"
-        onChange={() => {
-          console.log('clicked');
-        }}
+        onChange={onChange}
       />
       <InputComponent
-        name="Email"
+        name="email"
         placeholder="Your Email"
         type="email"
         labelText="Email"
-        onChange={() => {
-          console.log('clicked');
-        }}
+        onChange={onChange}
       />
       <InputComponent
-        name="Phone"
+        name="phone"
         placeholder="Your Phone number"
         type="tel"
         labelText="Phone"
-        onChange={() => {
-          console.log('clicked');
-        }}
+        onChange={onChange}
       />
       <InputComponent
-        name="Address"
+        name="address"
         placeholder="Your Address"
         type="text"
         labelText="Address"
-        onChange={() => {
-          console.log('clicked');
-        }}
+        onChange={onChange}
       />
     </div>
   );

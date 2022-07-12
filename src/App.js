@@ -14,12 +14,12 @@ function App() {
   const [activeShop, setActiveShop] = useState('shop-1');
   const [totalPrice, setTotalPrice] = useState(0);
 
+  /* Fetching all goods from DB when main page uploads.
+     Transform data from DB to usable format 
+     ({shopname: [items]}) */
   useEffect(() => {
     getAllGoods()
-      .then(res => {
-        console.log(res);
-        return res.data;
-      })
+      .then(res => res.data)
       .then(result => {
         const transformedData = transformData(result.data);
 
@@ -29,6 +29,9 @@ function App() {
       .catch(err => console.error(err.message));
   }, []);
 
+  /* Function to calculate total price of items in the cart.
+     Function triggered when cart changes (items quantity changes).
+  */
   const calcTotalPrice = cart.reduce((acc, el) => {
     let price = el.item.price;
     let quantity = el.quantity;
@@ -40,10 +43,12 @@ function App() {
     setTotalPrice(calcTotalPrice);
   }, [cart]); // eslint-disable-line
 
+  // Selects active shop to take goods of that shop
   let activeShopGoods = shopsAndGoods[activeShop];
-
   const shopChangeHandler = e => setActiveShop(e.target.textContent);
 
+  /* Function to add items to cart. 
+  Triggered when user clicks on 'add to cart' button */
   const addToCartHandler = id => {
     const itemToCart = activeShopGoods.find(item => item._id === id);
     let itemInCartIndex = cart.findIndex(el => el.item._id === itemToCart._id);
@@ -60,12 +65,26 @@ function App() {
     }
   };
 
+  // Function to change quantity of items in cart.
   const changeQuantity = (id, num) => {
     let newCart = [...cart];
     let itemInCartIndex = cart.findIndex(el => el.item._id === id);
 
     newCart[itemInCartIndex].quantity = num;
     setCart(newCart);
+  };
+
+  /* Sends order when form subbmitted. 
+     Gets items in cart and buyer info.
+     Order will be saved in DB */
+  const submitHandler = (e, state) => {
+    e.preventDefault();
+
+    // TODO - use fetch function
+
+    console.log(e);
+    console.log(state);
+    e.target.reset();
   };
 
   return (
@@ -94,6 +113,7 @@ function App() {
               goods={cart}
               totalPrice={totalPrice}
               onChangeQuantity={changeQuantity}
+              onSubmit={submitHandler}
             />
           }
         />

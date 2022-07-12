@@ -1,14 +1,38 @@
+import { useReducer } from 'react';
 import InputBox from '../../modules/Form/InputBox/InputBox';
 import GoodsInCart from '../../modules/CartBox/GoodsInCart';
 
 import styles from './ShoppingCartPage.module.css';
 
-const ShoppingCartPage = ({ goods, onChangeQuantity, totalPrice }) => {
+const initialState = { name: '', phone: '', email: '', address: '' };
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'initial':
+      return initialState;
+    // return { ...state, name: '', phone: '', email: '', address: '' };
+    default:
+      return { ...state, [action.type]: action.payload };
+  }
+};
+
+const ShoppingCartPage = ({
+  goods,
+  onChangeQuantity,
+  totalPrice,
+  onSubmit,
+}) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const onInputChange = ({ target: { name, value } }) => {
+    return dispatch({ type: name, payload: value });
+  };
+
   return (
     <div className={styles.container}>
-      <form>
+      <form onSubmit={event => onSubmit(event, state)}>
         <div className={styles.wrapper}>
-          <InputBox />
+          <InputBox onChange={onInputChange} />
           <GoodsInCart goods={goods} onChangeQuantity={onChangeQuantity} />
         </div>
 
