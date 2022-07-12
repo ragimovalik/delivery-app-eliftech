@@ -1,6 +1,7 @@
 const axios = require('axios').default;
 
-const BASE_URL = 'http://127.0.0.1:8000/';
+const BASE_URL = 'https://delivery-app-eliftech-be.herokuapp.com/';
+// const BASE_URL = 'http://127.0.0.1:8000/';
 
 export const getAllGoods = async () => {
   try {
