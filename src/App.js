@@ -21,7 +21,7 @@ function App() {
         return res.data;
       })
       .then(result => {
-        const transformedData = transformData(result);
+        const transformedData = transformData(result.data);
 
         setShopsAndGoods(transformedData);
         setShopsList(Object.keys(transformedData));
@@ -38,7 +38,7 @@ function App() {
 
   useEffect(() => {
     setTotalPrice(calcTotalPrice);
-  }, [cart]);
+  }, [cart]); // eslint-disable-line
 
   let activeShopGoods = shopsAndGoods[activeShop];
 
@@ -87,7 +87,7 @@ function App() {
         />
 
         <Route
-          path="cart"
+          path="/cart"
           title="Cart"
           element={
             <ShoppingCartPage
