@@ -13,17 +13,10 @@ export const getAllGoods = async () => {
   }
 };
 
-// export const sendCart = async payload => {
-//   const body = payload;
-
-//   try {
-//     const res = await fetch(`${BASE_URL}cart-set`, {
-//       method: 'POST',
-//       headers: {},
-//     });
-//     const parsed = await res.json();
-//     console.log(parsed);
-//   } catch (err) {
-//     console.error('Error on data fetch occures', err.message);
-//   }
-// };
+export const sendCart = async payload => {
+  try {
+    const res = await axios.post(`${BASE_URL}cart-set`, payload);
+  } catch (err) {
+    console.error('Error on data fetch occures', err.message);
+  }
+};

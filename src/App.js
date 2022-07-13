@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Header from './modules/Header';
 import { ShopsPage, ShoppingCartPage } from './views';
-import { getAllGoods } from './shared/helpers/api';
+import { getAllGoods, sendCart } from './shared/helpers/api';
 
 import { transformData } from './shared/helpers/transformData';
 
@@ -81,10 +81,9 @@ function App() {
     e.preventDefault();
 
     // TODO - use fetch function
+    sendCart({ buyer: state, goods: cart }).then(console.log);
 
-    console.log(e);
-    console.log(state);
-    e.target.reset();
+    // e.target.reset();
   };
 
   return (

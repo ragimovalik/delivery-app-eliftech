@@ -3,6 +3,7 @@ import InputBox from '../../modules/Form/InputBox/InputBox';
 import GoodsInCart from '../../modules/CartBox/GoodsInCart';
 
 import styles from './ShoppingCartPage.module.css';
+import { useEffect } from 'react';
 
 const initialState = { name: '', phone: '', email: '', address: '' };
 
@@ -10,7 +11,6 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'initial':
       return initialState;
-    // return { ...state, name: '', phone: '', email: '', address: '' };
     default:
       return { ...state, [action.type]: action.payload };
   }
@@ -27,6 +27,10 @@ const ShoppingCartPage = ({
   const onInputChange = ({ target: { name, value } }) => {
     return dispatch({ type: name, payload: value });
   };
+
+  useEffect(() => {
+    dispatch({ type: 'initial' });
+  }, []);
 
   return (
     <div className={styles.container}>
