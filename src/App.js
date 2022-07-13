@@ -91,6 +91,13 @@ function App() {
     e.target.reset();
   };
 
+  // Delete item from cart
+  const onItemDelete = itemId => {
+    const newCart = cart.filter(({ item }) => item._id !== itemId);
+
+    setCart(newCart);
+  };
+
   return (
     <div>
       <Header cart={cart} />
@@ -118,6 +125,7 @@ function App() {
               totalPrice={totalPrice}
               onChangeQuantity={changeQuantity}
               onSubmit={submitHandler}
+              onItemDelete={onItemDelete}
             />
           }
         />

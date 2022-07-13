@@ -21,6 +21,7 @@ const ShoppingCartPage = ({
   onChangeQuantity,
   totalPrice,
   onSubmit,
+  onItemDelete,
 }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -38,7 +39,11 @@ const ShoppingCartPage = ({
         <div className={styles.wrapper}>
           <InputBox onChange={onInputChange} />
 
-          <GoodsInCart goods={goods} onChangeQuantity={onChangeQuantity} />
+          <GoodsInCart
+            goods={goods}
+            onChangeQuantity={onChangeQuantity}
+            onItemDelete={onItemDelete}
+          />
         </div>
 
         <div className={styles.summary}>

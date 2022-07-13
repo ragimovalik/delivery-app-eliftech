@@ -2,7 +2,7 @@ import styles from './GoodsInCart.module.css';
 
 import ItemInCart from '../ItemInCart';
 
-const GoodsInCart = ({ goods, onChangeQuantity }) => {
+const GoodsInCart = ({ goods, onChangeQuantity, onItemDelete }) => {
   return (
     <div className={styles.wrapper}>
       <ul>
@@ -11,6 +11,7 @@ const GoodsInCart = ({ goods, onChangeQuantity }) => {
             key={item.item._id}
             item={item}
             onChangeQuantity={onChangeQuantity}
+            onItemDelete={onItemDelete}
           />
         ))}
       </ul>
