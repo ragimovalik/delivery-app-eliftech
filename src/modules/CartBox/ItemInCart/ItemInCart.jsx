@@ -1,3 +1,4 @@
+import { MdDelete } from 'react-icons/md';
 import styles from './ItemInCart.module.css';
 
 const ItemInCart = ({ item, onChangeQuantity }) => {
@@ -9,10 +10,11 @@ const ItemInCart = ({ item, onChangeQuantity }) => {
         className={styles.card__image}
       />
       <div className={styles.card__info}>
-        <p>{item.item.title}</p>
+        <h5 className={styles.card__title}>{item.item.title}</h5>
         <p>
           Price: <span>{item.item.price}$</span>
         </p>
+        <label htmlFor="quantity">Quantity:</label>
         <input
           type="number"
           name="quantity"
@@ -22,6 +24,8 @@ const ItemInCart = ({ item, onChangeQuantity }) => {
           value={item.quantity}
           onChange={e => onChangeQuantity(item.item._id, e.target.value)}
         />
+
+        <MdDelete className={styles.card__delButton} size="20px" />
       </div>
     </li>
   );

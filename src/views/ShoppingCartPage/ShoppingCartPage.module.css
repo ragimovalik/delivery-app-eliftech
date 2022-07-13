@@ -5,12 +5,52 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 10px;
+  margin-block-end: 5px;
 }
 
+/* Summary block */
 .summary {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  border: 1px dotted var(--main);
+  border-radius: 6px;
+  padding: 5px 35px;
+}
+
+.summary p {
+  margin-inline-end: 10px;
+}
+
+.summary span {
+  padding-inline: 5px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 1px;
+}
+
+.summary input {
+  width: 100px;
+  padding: 4px 10px;
+  background: var(--bgc-light);
+  outline: none;
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  color: var(--txt-main);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all linear 200ms;
+}
+
+.summary input:hover,
+.summary input:focus {
+  background: var(--main);
+  color: white;
 }

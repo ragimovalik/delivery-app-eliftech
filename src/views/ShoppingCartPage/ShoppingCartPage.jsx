@@ -37,6 +37,7 @@ const ShoppingCartPage = ({
       <form onSubmit={event => onSubmit(event, state)}>
         <div className={styles.wrapper}>
           <InputBox onChange={onInputChange} />
+
           <GoodsInCart goods={goods} onChangeQuantity={onChangeQuantity} />
         </div>
 

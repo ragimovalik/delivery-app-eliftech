@@ -17,12 +17,14 @@
   margin-block-end: 10px;
 }
 
-.card__info > p {
-  margin-block-end: 7px;
+.card__title {
+  text-transform: capitalize;
+  margin-block-end: 10px;
+  padding-inline-start: 5px;
 }
 
 .card__image {
-  min-width: 150px;
+  min-width: 120px;
   margin-inline-end: 5px;
   border: 1px solid var(--lighter);
   border-radius: 6px;
@@ -32,8 +34,31 @@
   margin-bottom: 10px;
 }
 
-/* 
-.card__btn {
+.card__info > p {
+  margin-block-end: 7px;
+  font-size: 0.875rem;
+}
+
+.card__info input {
+  margin-bottom: 15px;
+}
+
+.card__info label {
+  font-size: 0.675rem;
+  font-weight: 500;
+}
+
+.card__delButton {
   display: block;
-  margin-left: auto;
-} */
+  width: 18px;
+  height: 18px;
+  margin-inline: auto;
+  text-align: center;
+  fill: var(--main);
+}
+
+.card__delButton:hover,
+.card__delButton:focus {
+  fill: red;
+  cursor: pointer;
+}
