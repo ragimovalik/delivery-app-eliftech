@@ -2,14 +2,15 @@
   min-width: 100px;
   min-height: 100px;
 
-  border: 1px solid red;
+  border: 1px solid var(--main);
   border-radius: 6px;
   padding: 5px;
 }
 
 .card__image {
-  border: 1px solid green;
   width: 100%;
+  border: 1px solid var(--lighter);
+  border-radius: 6px;
 }
 
 .card__title {
@@ -19,5 +20,21 @@
 .card__btn {
   display: block;
   margin-left: auto;
-  background: coral;
+  padding: 3px 10px;
+  background: var(--bgc-light);
+  outline: none;
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  color: var(--txt-main);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all linear 200ms;
+}
+
+.card__btn:hover,
+.card__btn:focus {
+  transform: scale(1.02);
 }

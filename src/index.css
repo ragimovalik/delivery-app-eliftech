@@ -1,3 +1,10 @@
+:root {
+  --lighter: #c9d2da;
+  --main: #6f7777;
+  --txt-main: #2c3541;
+  --bgc-light: #f0f0f0;
+}
+
 /* Box sizing rules */
 *,
 *::before,

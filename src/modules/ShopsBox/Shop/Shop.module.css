@@ -3,9 +3,22 @@
 }
 
 .shop > button {
-  text-align: center;
   width: 100%;
   padding: 5px;
+  outline: none;
   border: 3px solid lightgray;
   border-radius: 6px;
+  background: var(--bgc-light);
+  color: var(--txt-main);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform linear 200ms;
+}
+
+.shop > button:hover,
+.shop > button:focus {
+  transform: scale(1.02);
 }

@@ -6,7 +6,7 @@
   min-width: 200px;
   min-height: 120px;
 
-  border: 1px solid red;
+  border: 1px solid var(--main);
   border-radius: 6px;
   padding: 5px;
 
@@ -22,10 +22,10 @@
 }
 
 .card__image {
-  border: 1px solid green;
-  border-radius: 6px;
   min-width: 150px;
   margin-inline-end: 5px;
+  border: 1px solid var(--lighter);
+  border-radius: 6px;
 }
 
 .card__info {
@@ -36,5 +36,4 @@
 .card__btn {
   display: block;
   margin-left: auto;
-  background: coral;
 } */
