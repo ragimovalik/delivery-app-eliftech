@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Toaster, toast } from 'react-hot-toast';
 
 import Header from './modules/Header';
 import { ShopsPage, ShoppingCartPage } from './views';
@@ -80,10 +81,14 @@ function App() {
   const submitHandler = (e, state) => {
     e.preventDefault();
 
-    // TODO - use fetch function
-    sendCart({ buyer: state, goods: cart }).then(console.log);
+    console.log(state);
 
-    // e.target.reset();
+    // TODO - use fetch function
+    cart.length > 0
+      ? sendCart({ buyer: state, goods: cart })
+      : toast.error('Please add some goods to the cart');
+
+    e.target.reset();
   };
 
   return (
@@ -117,6 +122,7 @@ function App() {
           }
         />
       </Routes>
+      <Toaster />
     </div>
   );
 }

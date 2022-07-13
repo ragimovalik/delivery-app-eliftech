@@ -11,6 +11,7 @@ const InputBox = ({ onChange }) => {
         type="text"
         labelText="Name"
         onChange={onChange}
+        required
       />
       <InputComponent
         name="email"
@@ -18,6 +19,7 @@ const InputBox = ({ onChange }) => {
         type="email"
         labelText="Email"
         onChange={onChange}
+        required
       />
       <InputComponent
         name="phone"
@@ -25,6 +27,7 @@ const InputBox = ({ onChange }) => {
         type="tel"
         labelText="Phone"
         onChange={onChange}
+        required
       />
       <InputComponent
         name="address"
@@ -32,6 +35,7 @@ const InputBox = ({ onChange }) => {
         type="text"
         labelText="Address"
         onChange={onChange}
+        required
       />
     </div>
   );

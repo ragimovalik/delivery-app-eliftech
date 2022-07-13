@@ -25,7 +25,7 @@ const ShoppingCartPage = ({
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const onInputChange = ({ target: { name, value } }) => {
-    return dispatch({ type: name, payload: value });
+    return dispatch({ type: name, payload: value.toLowerCase() });
   };
 
   useEffect(() => {
