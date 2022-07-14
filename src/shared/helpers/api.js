@@ -1,7 +1,9 @@
 const axios = require('axios').default;
 
 // const BASE_URL = 'https://delivery-app-eliftech-be.herokuapp.com/';
-const BASE_URL = 'http://127.0.0.1:8000/';
+// const BASE_URL = 'http://127.0.0.1:8000/';
+
+const BASE_URL = 'https://uhpv22.deta.dev/';
 
 export const getAllGoods = async () => {
   try {
@@ -16,6 +18,7 @@ export const getAllGoods = async () => {
 export const sendCart = async payload => {
   try {
     const res = await axios.post(`${BASE_URL}cart-set`, payload);
+    return res;
   } catch (err) {
     console.error('Error on data fetch occures', err.message);
   }

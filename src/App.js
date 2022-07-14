@@ -12,7 +12,7 @@ function App() {
   const [shopsAndGoods, setShopsAndGoods] = useState([]);
   const [shopsList, setShopsList] = useState([]);
   const [cart, setCart] = useState([]);
-  const [activeShop, setActiveShop] = useState('shop-1');
+  const [activeShop, setActiveShop] = useState('');
   const [totalPrice, setTotalPrice] = useState(0);
 
   /* Fetching all goods from DB when main page uploads.
