@@ -5,9 +5,18 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1 / 2;
   gap: 10px;
-  margin-block-end: 5px;
+  margin-block-end: 10px;
+}
+
+@media only screen and (min-width: 480px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    margin-block-end: 5px;
+  }
 }
 
 /* Summary block */

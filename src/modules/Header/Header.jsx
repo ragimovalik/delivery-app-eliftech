@@ -21,7 +21,10 @@ const Header = ({ cart }) => {
             className={({ isActive }) => (isActive ? styles.active : '')}
             to="/cart"
           >
-            My Cart {cart && <span> - {cart.length}</span>}
+            My Cart{' '}
+            {cart && (
+              <span className={styles.items__incart}> - {cart.length}</span>
+            )}
           </NavLink>
         </li>
       </ul>
